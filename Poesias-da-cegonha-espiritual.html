@@ -1,0 +1,180 @@
+<!--==========================================
+     LIVRO CEGONHA ESPIRITUAL – VERSÃO ANIMADA
+     SAL CAINDO + POEMAS COM MOVIMENTO
+==============================================-->
+
+<div class="ceu-escuro sal-caindo livro">
+
+  <h1 class="titulo-livro">Cegonha Espiritual</h1>
+  <p class="subtitulo">Quatro poemas sob chuva de sal celestial</p>
+
+  <!--POEMA 1-->
+  <div class="poema fade">
+    <h2>A Cegonha do Silêncio</h2>
+    <p>No céu violeta da tarde que ora,<br />
+    uma cegonha risca o véu do infinito.<br />
+    Traz no bico um fio de luz demorada,<br />
+    como se carregasse um segredo bendito.</p>
+
+    <p>Seu voo é prece sem palavra alguma,<br />
+    um salmo branco desenhado no ar.<br />
+    Cada batida de asa acende a bruma,<br />
+    cada curva é um convite a se escutar.</p>
+
+    <p>Ela pousa onde a alma se esconde,<br />
+    no canto esquecido de quem já cansou.<br />
+    E ali, em silêncio, apenas responde:<br />
+    “Você não está só, o Amor te encontrou.”</p>
+  </div>
+
+  <!--POEMA 2-->
+  <div class="poema fade">
+    <h2>Ninho Entre Dois Mundos</h2>
+    <p>No alto da árvore que toca o céu,<br />
+    a cegonha ergue um ninho de brisa.<br />
+    Entre folhas, penas e um tênue véu,<br />
+    ela tece paz, ternura e branda luz precisa.</p>
+
+    <p>É ninho de quem busca recomeço,<br />
+    de quem já chorou e quer renascer.<br />
+    Ali, o tempo perde o seu tropeço,<br />
+    e o coração aprende a se acolher.</p>
+
+    <p>Entre dois mundos ela faz morada:<br />
+    metade terra, metade clarão.<br />
+    Cegonha espiritual, alma alada,<br />
+    que faz do peito o seu novo chão.</p>
+  </div>
+
+  <!--POEMA 3-->
+  <div class="poema fade">
+    <h2>Mensageira do Invisível</h2>
+    <p>Vem a cegonha por sobre o mar,<br />
+    pisando espelhos de prata e luar.<br />
+    Não traz apenas vida em seu voo,<br />
+    traz recados de um reino tão bom e tão novo.</p>
+
+    <p>Ela sussurra em ventos sutis,<br />
+    fala em sinais que ninguém mais diz.<br />
+    No bater de asas, um evangelho manso,<br />
+    no pouso discreto, um eterno remanso.</p>
+
+    <p>Quem a percebe, muda o olhar:<br />
+    vê mil milagres no simples estar.<br />
+    Porque a cegonha, em seu plano sutil,<br />
+    revela o invisível em cada fio do fio.</p>
+  </div>
+
+  <!--POEMA 4-->
+  <div class="poema fade">
+    <h2>Rastro de Luz</h2>
+    <p>Quando a noite pesa sobre o peito,<br />
+    e o medo faz sombra no chão,<br />
+    a cegonha risca o céu desfeito<br />
+    com um traço de pura compaixão.</p>
+
+    <p>Seu rastro é linha de aurora nascente,<br />
+    um lembrete suave: “vai passar”.<br />
+    Ela pousa na dor, mas segue em frente,<br />
+    ensinando a alma a se levantar.</p>
+
+    <p>E quando enfim o dia clareia,<br />
+    ninguém mais vê seu corpo voador.<br />
+    Só fica no ar, como doce teia,<br />
+    a certeza calma de um maior Amor.</p>
+  </div>
+
+</div>
+
+<!--==========================================
+     CSS COMPLETO – SAL CAINDO + MOVIMENTO
+==============================================-->
+<style>
+
+/* Fundo escuro espiritual */
+.ceu-escuro {
+  background: linear-gradient(to bottom, #0d0b1f, #1a1538, #0d0b1f);
+  padding: 40px 20px;
+  border-radius: 18px;
+  position: relative;
+  overflow: hidden;
+  color: #f3eaff;
+  font-family: "Georgia", serif;
+}
+
+/* Título */
+.titulo-livro {
+  text-align: center;
+  font-size: 2.4rem;
+  color: #ffffff;
+  text-shadow: 0 0 12px #b38cff;
+}
+
+.subtitulo {
+  text-align: center;
+  color: #d8caff;
+  margin-bottom: 30px;
+}
+
+/* POEMAS */
+.poema {
+  margin-bottom: 35px;
+  padding: 20px;
+  background: rgba(255,255,255,0.05);
+  border-left: 3px solid rgba(255,255,255,0.3);
+  border-radius: 8px;
+  backdrop-filter: blur(4px);
+  animation: fadeIn 2s ease forwards;
+  opacity: 0;
+}
+
+.poema h2 {
+  color: #ffe6ff;
+  margin-bottom: 10px;
+}
+
+/* Animação de entrada suave */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ============================
+   SAL CAINDO DO CÉU
+=============================== */
+
+.sal-caindo::before,
+.sal-caindo::after {
+  content: "";
+  position: absolute;
+  top: -200px;
+  left: 0;
+  width: 100%;
+  height: 200%;
+  pointer-events: none;
+  background-image:
+    radial-gradient(2px 2px, rgba(255,255,255,0.9), transparent),
+    radial-gradient(2px 2px, rgba(255,255,255,0.7), transparent),
+    radial-gradient(2px 2px, rgba(255,255,255,0.8), transparent),
+    radial-gradient(2px 2px, rgba(255,255,255,0.6), transparent);
+  background-size: 4px 4px;
+  animation: cair 12s linear infinite;
+  opacity: 0.7;
+}
+
+.sal-caindo::after {
+  animation-duration: 18s;
+  opacity: 0.4;
+}
+
+/* Movimento vertical real */
+@keyframes cair {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(400px); }
+}
+
+</style>
+
+<!--==========================================
+     FIM DO LIVRO COMPLETO
+==============================================-->
