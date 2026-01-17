@@ -1,0 +1,220 @@
+<div>
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="UTF-8">
+<title>Anjo da Luz</title>
+<style>
+body {
+    margin: 0;
+    height: 100vh;
+    font-family: 'Segoe UI', sans-serif;
+    background: radial-gradient(circle at top, #ffffff 0%, #c9e6ff 25%, #1b2955 70%, #050816 100%);
+    overflow: hidden;
+    color: #fdfdfd;
+}
+
+/* Céu e ambiente */
+.ceu {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Estrelas suaves */
+.estrela {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background: rgba(255,255,255,0.9);
+    border-radius: 50%;
+    animation: brilhar 3s ease-in-out infinite alternate;
+}
+.estrela:nth-child(1) { top: 10%; left: 20%; animation-delay: 0.5s; }
+.estrela:nth-child(2) { top: 25%; left: 70%; animation-delay: 1.2s; }
+.estrela:nth-child(3) { top: 40%; left: 40%; animation-delay: 2s; }
+.estrela:nth-child(4) { top: 15%; left: 85%; animation-delay: 1.7s; }
+.estrela:nth-child(5) { top: 5%; left: 50%; animation-delay: 0.9s; }
+
+@keyframes brilhar {
+    from { opacity: 0.4; transform: scale(0.7); }
+    to   { opacity: 1; transform: scale(1.4); }
+}
+
+/* Texto espiritual */
+.verso {
+    position: absolute;
+    top: 8%;
+    width: 100%;
+    text-align: center;
+    font-size: 1.3rem;
+    text-shadow: 0 0 10px rgba(255,255,255,0.7);
+}
+
+/* Anjo da luz */
+.anjo-container {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    width: 200px;
+    height: 260px;
+    transform: translateX(-50%);
+    animation: flutuar 6s ease-in-out infinite;
+}
+
+@keyframes flutuar {
+    0%   { transform: translateX(-50%) translateY(0); }
+    50%  { transform: translateX(-50%) translateY(-15px); }
+    100% { transform: translateX(-50%) translateY(0); }
+}
+
+/* Halo */
+.halo {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90px;
+    height: 30px;
+    border-radius: 50%;
+    border: 3px solid rgba(255,255,210,0.9);
+    box-shadow: 0 0 18px rgba(255,255,210,0.9);
+    animation: halo-pulsa 3s ease-in-out infinite;
+}
+@keyframes halo-pulsa {
+    0%   { transform: translateX(-50%) scale(1); opacity: 0.8; }
+    50%  { transform: translateX(-50%) scale(1.1); opacity: 1; }
+    100% { transform: translateX(-50%) scale(1); opacity: 0.8; }
+}
+
+/* Corpo do anjo */
+.anjo {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 140px;
+    height: 220px;
+}
+
+/* Cabeça */
+.cabeca {
+    width: 60px;
+    height: 60px;
+    background: radial-gradient(circle, #ffe6c7, #c27a4b);
+    border-radius: 50%;
+    margin: 0 auto;
+    box-shadow: 0 0 12px rgba(255,255,255,0.6);
+}
+
+/* Corpo */
+.corpo {
+    width: 90px;
+    height: 130px;
+    background: linear-gradient(180deg, #ffffff, #e3f0ff, #b9d4ff);
+    border-radius: 50px 50px 20px 20px;
+    margin: 0 auto;
+    box-shadow: 0 0 18px rgba(255,255,255,0.7);
+}
+
+/* Asas */
+.asa {
+    position: absolute;
+    top: 60px;
+    width: 80px;
+    height: 120px;
+    background: radial-gradient(circle at 30% 20%, #ffffff, #e3f0ff, rgba(200,220,255,0.1));
+    border-radius: 60px 60px 10px 60px;
+    opacity: 0.9;
+    filter: blur(0.5px);
+    animation: bater-asas 2.8s ease-in-out infinite;
+}
+.asa.esq {
+    left: -40px;
+    transform-origin: right center;
+}
+.asa.dir {
+    right: -40px;
+    transform-origin: left center;
+    border-radius: 60px 60px 60px 10px;
+}
+
+@keyframes bater-asas {
+    0%   { transform: rotate(8deg); opacity: 0.9; }
+    50%  { transform: rotate(-10deg); opacity: 0.6; }
+    100% { transform: rotate(8deg); opacity: 0.9; }
+}
+
+/* Feixe de luz */
+.feixe-luz {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 220px;
+    height: 65%;
+    background: radial-gradient(circle at bottom, rgba(255,255,255,0.7), transparent 70%);
+    opacity: 0.35;
+    filter: blur(2px);
+    animation: luz-pulsa 5s ease-in-out infinite;
+}
+@keyframes luz-pulsa {
+    0%   { opacity: 0.2; }
+    50%  { opacity: 0.5; }
+    100% { opacity: 0.2; }
+}
+
+/* Legenda */
+.legenda {
+    position: absolute;
+    bottom: 2%;
+    width: 100%;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #d0ddff;
+    opacity: 0.85;
+}
+</style>
+</head>
+<body>
+
+<div class="ceu">
+    <!-- Estrelas -->
+    <div class="estrela"></div>
+    <div class="estrela"></div>
+    <div class="estrela"></div>
+    <div class="estrela"></div>
+    <div class="estrela"></div>
+
+    <!-- Verso -->
+    <div class="verso">
+        Anjo da luz, guardião do caminho,<br>
+        guia o coração que procura o divino.
+    </div>
+
+    <!-- Feixe de luz -->
+    <div class="feixe-luz"></div>
+
+    <!-- Anjo da luz -->
+    <div class="anjo-container">
+        <div class="halo"></div>
+        <div class="anjo">
+            <div class="asa esq"></div>
+            <div class="asa dir"></div>
+            <div class="cabeca"></div>
+            <div class="corpo"></div>
+        </div>
+    </div>
+
+    <!-- Legenda -->
+    <div class="legenda">
+        Anjo da Luz — movimento infinito de proteção e paz.
+    </div>
+</div>
+
+</body>
+</html>
+
+
+</div>
