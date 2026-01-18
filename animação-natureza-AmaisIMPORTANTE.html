@@ -1,0 +1,374 @@
+
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motor Cegonha — Gráficos</title>
+
+<style>
+h2{text-align:center; color:#0000CD;}
+.maria{text-align:center; color:#1E90FF;}
+/* Não animar nada dentro do bloco cegonha */
+cegonha, cegonha * {
+    animation: none !important;
+}
+
+/* ÁRVORE */
+.arvore {
+    width: 260px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+/* Ramos com balanço leve */
+.ramos {
+    width: 180px;
+    height: 18px;
+    background: #8B4513;
+    margin: 0 auto;
+    border-radius: 8px;
+    animation: balanco 4s ease-in-out infinite;
+}
+
+/* Tronco */
+.tronco {
+    width: 35px;
+    height: 100px;
+    background: #A0522D;
+    margin: 10px auto;
+    border-radius: 6px;
+}
+
+/* Troncos pequenos */
+.troncos-pequenos {
+    width: 100px;
+    height: 8px;
+    background: #8B4513;
+    margin: 8px auto;
+    border-radius: 4px;
+    animation: balanco 5s ease-in-out infinite reverse;
+}
+
+/* Folhas com pulsação leve */
+.folhas {
+    width: 150px;
+    height: 60px;
+    background: #228B22;
+    margin: 10px auto;
+    border-radius: 50%;
+    animation: pulsar 3.5s ease-in-out infinite;
+}
+
+/* Frutos */
+.frutos {
+    width: 30px;
+    height: 30px;
+    background: #FF4500;
+    margin: 10px auto;
+    border-radius: 50%;
+    animation: flutuar 4s ease-in-out infinite;
+}
+
+/* Verso com brilho suave */
+.verso {
+    margin-top: 15px;
+    font-style: italic;
+    animation: brilho 6s ease-in-out infinite;
+}
+
+/* Feixe de luz */
+.passarinhos {
+    width: 80px;
+    height: 80px;
+    background: radial-gradient(circle, rgba(255,255,0,0.4), transparent);
+    margin: 15px auto;
+    animation: pulsar 5s ease-in-out infinite;
+}
+
+/* Pássaros a flutuar */
+.passarinhos-container {
+    width: 100px;
+    margin: 20px auto;
+    animation: flutuar 6s ease-in-out infinite;
+}
+
+/* Natureza */
+.céu {
+    width: 100%;
+    height: 100px;
+    background: #87CEEB;
+    animation: ceu 10s linear infinite;
+}
+
+.horizonte {
+    width: 100%;
+    height: 8px;
+    background: #FFD700;
+}
+
+.mar {
+    width: 100%;
+    height: 60px;
+    background: #1E90FF;
+    animation: onda 4s ease-in-out infinite;
+}
+
+.terra {
+    width: 100%;
+    height: 50px;
+    background: #8B4513;
+}
+
+.legenda {
+    margin-top: 10px;
+    font-weight: bold;
+    animation: brilho 5s ease-in-out infinite;
+}
+
+/* ========================= */
+/* ANIMAÇÕES LEVES */
+/* ========================= */
+
+@keyframes balanco {
+    0%, 100% { transform: rotate(0deg); }
+    50% { transform: rotate(3deg); }
+}
+
+@keyframes pulsar {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
+@keyframes flutuar {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+@keyframes onda {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(-12px); }
+}
+
+@keyframes ceu {
+    0% { background: #87CEEB; }
+    50% { background: #B0E0E6; }
+    100% { background: #87CEEB; }
+}
+
+@keyframes brilho {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.6; }
+}
+
+</style>
+
+</head>
+<body>
+<div id="conteudo" class="maria">
+<cegonha>
+cegonha('<h2>Força de alma.</h2>')
+cegonha("Assim nasce a fé em poder de realizar.<br>")
+cegonha("O caminho na verdade de descobrir.<br>")
+cegonha("A simplicidade de inovar.<br>")
+cegonha("A capacidade de realizar<br>")
+cegonha("O poder da tua alma. Sendo fé verdadeira!<br>")
+cegonha('<p style="color:green;">É um infinito nos universos de Deus.</p>')
+cegonha('<p style="color:orange;">Pura arte em criação.</p>')
+cegonha('<h3 style="color:blue;">Verdadeira salvação! O poder. Deus a criação.</h3>')
+cegonha('<p style="color:purple;">Jesus Maria a libertação</p>')
+
+</cegonha>
+</div>
+
+<div class="arvore">
+    <!-- Estrelas -->
+    <div class="ramos"></div>
+    <div class="tronco"></div>
+    <div class="troncos-pequenos"></div>
+    <div class="folhas"></div>
+    <div class="frutos"></div>
+
+    <!-- Verso -->
+    <div class="verso">
+       O espírito desperto em amor.<br>
+       Dá há alma muito mais luz,<br>
+       na forma de calor iluminado e abençoado.
+    </div>
+
+    <!-- Feixe de luz -->
+    <div class="passarinhos"></div>
+
+    <!-- passarinhos -->
+    <div class="passarinhos-container">
+        <div class="penas"></div>
+        <div class="cabeça">
+            <div class="olho esq"></div>
+            <div class="olho dir"></div>
+            <div class="asa esq"></div>
+            <div class="asa dir"></div>
+            <div class="corpo"></div>
+        </div>
+    </div>
+   <div class="natureza-paisagem">
+    <!-- natureza -->
+    <div class="céu"></div>
+    <div class="horizonte"></div>
+    <div class="mar"></div>
+    <div class="terra"></div>
+    <div class="cores-naturais"></div>
+    <!-- Legenda -->
+    <div class="legenda">
+        Que o amor seja um silêncio atitude infinito.
+    </div>
+</div>
+
+
+    
+<script type="text/javascript">
+//<![CDATA[
+
+/* =========================
+   FUNÇÕES SEGURAS EXTRA
+   ========================= */
+
+// repetir texto n vezes
+function repetir(str, n) {
+    n = Number(n) || 0;
+    if (n < 0 || n > 1000) n = 0;
+    return String(str).repeat(n);
+}
+
+/* =========================
+   SANDBOX CEGONHA — MÁXIMA
+   ========================= */
+
+function sandboxCegonha(html) {
+    const proibidos = [
+        /window\b/i,
+        /document\b/i,
+        /eval\b/i,
+        /Function\b/i,
+        /onload\b/i,
+        /onerror\b/i,
+        /<script/i,
+        /<\/script/i
+    ];
+
+    return html.replace(/<cegonha>([\s\S]*?)<\/cegonha>/g, function(_, codigo) {
+        for (let r of proibidos) {
+            if (r.test(codigo)) {
+                return "<div style='color:red;padding:10px;border:2px solid red'>" +
+                       "ERRO: bloco cegonha bloqueado pela sandbox por segurança." +
+                       "</div>";
+            }
+        }
+        return "<cegonha>" + codigo + "</cegonha>";
+    });
+}
+
+/* =========================
+   MOTOR CEGONHA 2 — BASE
+   SEM LOOP, SEM ELSE
+   ========================= */
+
+function isExpressaoSegura(expr) {
+    // apenas números, operadores e parênteses
+    return /^[0-9+\-*/().\s%^]*$/.test(expr);
+}
+
+function avaliarExpressaoSegura(expr) {
+    expr = String(expr).trim();
+    if (!isExpressaoSegura(expr) || expr === "") return 0;
+    try {
+        // só operadores matemáticos, nada de nomes
+        return Function('"use strict"; return (' + expr + ')')();
+    } catch (e) {
+        return 0;
+    }
+}
+
+function executarCegonhaSeguro(html) {
+    return html.replace(/<cegonha>([\s\S]*?)<\/cegonha>/g, function(_, codigo) {
+
+        let vars = {};
+        let saida = "";
+
+        let linhas = codigo.split(/\r?\n/)
+            .map(l => l.trim())
+            .filter(l => l !== "");
+
+        linhas.forEach(l => {
+
+            // atribuição: a = 23**67/34
+            if (l.includes("=") && !l.startsWith("cegonha(")) {
+                let partes = l.split("=");
+                if (partes.length >= 2) {
+                    let nome = partes[0].trim();
+                    let valor = partes.slice(1).join("=").trim();
+
+                    if (/^[a-zA-Z_][a-zA-Z0-9_]*$/.test(nome) && isExpressaoSegura(valor)) {
+                        vars[nome] = avaliarExpressaoSegura(valor);
+                    }
+                }
+                return;
+            }
+
+            // comando cegonha(...)
+            if (l.startsWith("cegonha(")) {
+                let conteudo = l.replace(/^cegonha\s*\(|\)$/g, "").trim();
+
+                // literal de string
+                if ((conteudo.startsWith('"') && conteudo.endsWith('"')) ||
+                    (conteudo.startsWith("'") && conteudo.endsWith("'"))) {
+                    saida += conteudo.slice(1, -1);
+                    return;
+                }
+
+                // variável simples
+                if (/^[a-zA-Z_][a-zA-Z0-9_]*$/.test(conteudo) && conteudo in vars) {
+                    saida += vars[conteudo];
+                    return;
+                }
+
+                // expressão numérica segura
+                if (isExpressaoSegura(conteudo)) {
+                    saida += avaliarExpressaoSegura(conteudo);
+                    return;
+                }
+
+                // fallback: se não for nada disso, não executa
+                saida += "";
+            }
+        });
+
+        return "<div style='padding:10px;background:#eee;border-left:4px solid purple'>" +
+               saida +
+               "</div>";
+    });
+}
+
+/* =========================
+   INICIALIZAÇÃO — ANTI‑BLOGGER
+   encadeia com onload existente
+   ========================= */
+
+(function(oldOnload) {
+    window.onload = function(e) {
+        if (typeof oldOnload === "function") {
+            try { oldOnload(e); } catch (err) {}
+        }
+
+        document.querySelectorAll("div[id^='conteudo']")
+            .forEach(function(div) {
+                var seguro = sandboxCegonha(div.innerHTML);
+                div.innerHTML = executarCegonhaSeguro(seguro);
+            });
+    };
+})(window.onload);
+
+//]]>
+</script>
+
+</body>
+</html>
